@@ -1,0 +1,29 @@
+iframes 
+can load entite html docs like this: 
+<iframe src='test.html'/>
+
+enable comms between parent and child 
+can write down "parent" inside of child and reference parent context
+
+from parent we can access child like this: 
+
+document.querySelector('iframe').contentWindow.<prop>
+
+iframe settings: 
+Direct access between iframes is allowed when iframe element does nott have a sandbox property 
+or has sandbox="allow-same-origin" property
+
+<iframe src='/test.html' sandbox='' /> would disallow access via parent
+
+<iframe src='/test.html' sandbox='allow-same-origin' /> would allow access
+
+access is not allowed when requests come from different domains or ports
+
+const html = `<h1>hello </h1>`
+<iframe srcDoc={html} /> allows to assign local doc to iframe
+
+
+code /etc/hosts 
+127.0.0.1 nothing.localhost => will treat it different domains
+
+
