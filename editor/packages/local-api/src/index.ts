@@ -24,7 +24,7 @@ export const serve = (
   } else {
     //resolve will figure absolute path of index.html
     //on my local machine this will result in /Users/alisherkabildjanov/Projects/ts-react/jbook/packages/local-client/build/index.html
-    const packPath = require.resolve('local-client/build/index.html');
+    const packPath = require.resolve('@alisherk-editor/local-client/build/index.html');
 
     app.use(express.static(path.dirname(packPath)));
   }
